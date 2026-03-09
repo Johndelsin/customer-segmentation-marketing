@@ -2,39 +2,66 @@
 
 🎯 **Business Problem**
 
-The marketing team wants to improve campaign effectiveness by identifying distinct customer groups instead of sending generic promotions to all customers. 
-This project applies unsupervised learning (K-Means clustering) to segment customers based on income and spending behavior.
+Marketing teams often send the same promotional campaigns to all customers, which can reduce engagement and marketing efficiency. Customer segmentation helps businesses group customers with similar characteristics so that marketing strategies can be more targeted.
+
+This project applies unsupervised machine learning techniques to segment customers based on demographic and spending behavior.
 
 📁 **Dataset**
-- Mall Customers dataset containing:
+The dataset contains information about mall customers, including:
+
 - Age
 - Gender
 - Annual Income (k$)
 - Spending Score (1–100)
 
+The **Spending Score** is a metric assigned by the mall based on customer purchasing behavior and spending patterns.
+
 🧠 **Methodology**
-- Selected features: Annual Income & Spending Score
-- Scaled data using StandardScaler
-- Used Elbow Method to determine optimal number of clusters
-- Applied K-Means clustering
+The following steps were performed in the analysis:
+
+1. Data inspection and quality checks
+2. Feature selection (Age, Income, Spending Score)
+3. Feature scaling using StandardScaler
+4. Identification of optimal clusters using the Elbow Method
+5. Customer segmentation using multiple clustering algorithms:
+  K-Means Clustering
+  Gaussian Mixture Models (GMM)
+  Hierarchical Clustering
+  DBSCAN
+6. Cluster evaluation using the Silhouette Score
 
 📈 **Results**
-The model identified 5 customer segments:
-- High Income – High Spending (Premium Customers)
-- High Income – Low Spending (Upselling Opportunity)
-- Low Income – High Spending (Value Loyal Customers)
-- Low Income – Low Spending (Low Engagement Segment)
-- Mid Income – Moderate Spending (Average Customers)
+The analysis identified five main customer segments based on income and spending behavior:
+
+- High Income – High Spending
+  High-value customers who contribute significantly to revenue.
+
+- High Income – Low Spending
+  Customers with strong purchasing power but lower engagement.
+
+- Low Income – High Spending
+  Customers who actively purchase despite lower income levels.
+
+- Low Income – Low Spending
+  Price-sensitive customers with lower engagement.
+
+- Moderate Income – Moderate Spending
+  Average customers representing a large portion of the customer base.
 
 📌 **Marketing Insights**
-- Customer segmentation enables:
+Customer segmentation allows businesses to design more effective marketing strategies, including:
+
 - Targeted marketing campaigns
 - Personalized promotions
-- Improved resource allocation
-- Higher engagement potential
+- Loyalty programs for high-value customers
+- Promotional strategies for price-sensitive segments
+
+These insights help improve customer engagement and marketing efficiency.
 
 🛠 **Tools Used**
 Python
 Pandas
-Matplotlib
 Scikit-learn
+Matplotlib
+Seaborn
+Jupyter Notebook
